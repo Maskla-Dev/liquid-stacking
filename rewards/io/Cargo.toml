@@ -12,6 +12,3 @@ gstd.workspace = true
 scale-info.workspace = true
 parity-scale-codec.workspace = true
 hashbrown.workspace = true
-stacking-control-io.workspace = true
-st-vara-master-io.workspace = true
-liquidity-stacking-pool.workspace = true

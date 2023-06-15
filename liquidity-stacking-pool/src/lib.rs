@@ -1,14 +1,46 @@
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
+#![no_std]
+use gstd::{prelude::*, ActorId, msg, Encode, Decode, TypeInfo, Debug, Default};
+use hashbrown::HashMap;
+use Account;
+
+#[derive(Encode, Decode, TypeInfo, Debug, Default)]
+pub struct LiquidityStackingPool{
+    admin: ActorId,
+    accounts: HashMap<ActorId, Account>,
+    current_varas: u128,
+    current_st_varas: u128,
+    min_deposit: u128,
 }
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+static mut LIQUIDITY_STACKING_POOL: Option<LiquidityStackingPool> = None;
 
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
+impl LiquidityStackingPool{
+    //Create a new LiquidityStackingPool
+    fn new(admin: ActorId) -> Self{
+        Self{
+            admin,
+            accounts: HashMap::new(),
+            min_deposit: 10,
+            current_varas: 0,
+            current_st_varas: 0,
+        }
     }
+    //Withdraw VARAS from the pool
+    pub fn withdraw_unstaked(&mut self, amount: u128){
+        
+    }
+}
+
+#[no_mangle]
+
+extern "C" fn init(){
+
+}
+
+extern "C" fn handle(){
+
+}
+
+extern "C" fn State(){
+
 }

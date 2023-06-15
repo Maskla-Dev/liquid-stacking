@@ -1,14 +1,12 @@
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
-}
+use gmeta::{Metadata};
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+pub struct Rewards;
 
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
+impl Metadata for Rewards{
+    type Init = ();
+    type Handle = ();
+    type Reply = ();
+    type Others = ();
+    type Signal = ();
+    type State = ();
 }
