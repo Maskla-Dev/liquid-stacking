@@ -1,0 +1,17 @@
+[package]
+name = "stacking-control-io"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+gmeta.workspace = true
+gstd.workspace = true
+scale-info.workspace = true
+parity-scale-codec.workspace = true
+hashbrown.workspace = true
+liquidity-stacking-pool-io.workspace = true
+rewards-io.workspace = true
+st-vara-master-io.workspace = true

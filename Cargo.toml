@@ -1,0 +1,27 @@
+[workspace]
+resolver = "2"
+members = [
+    "liquidity-stacking-pool",
+    "rewards",
+    "st-vara-master",
+    "stacking-control"
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+authors = ["Montoya Morales Luis Antonio"]
+
+[workspace.dependencies]
+liquid-stacking-io = { path = "io" }
+gstd = { git = "https://github.com/gear-tech/gear.git", features = ["debug"], rev = "5c685d0f15c412ab6ee019ceaf7ce084426dfb68"}
+gmeta = { git = "https://github.com/gear-tech/gear.git", rev = "5c685d0f15c412ab6ee019ceaf7ce084426dfb68"}
+scale-info = { version = "2", default-features = false, features = ["derive"] }
+parity-scale-codec = { version = "3", default-features = false }
+gtest = { git = "https://github.com/gear-tech/gear.git", rev = "5c685d0f15c412ab6ee019ceaf7ce084426dfb68"}
+gear-wasm-builder = { git = "https://github.com/gear-tech/gear.git", rev = "5c685d0f15c412ab6ee019ceaf7ce084426dfb68" }
+hashbrown = "0.14"
+liquidity-stacking-pool-io.path = "liquidity-stacking-pool/io"
+rewards-io.path = "rewards/io"
+st-vara-master-io.path = "st-vara-master/io"
+stacking-control-io.path = "stacking-control/io"
